@@ -9,9 +9,8 @@ export const SimpleBox = () => {
 
   return (
     <div>
-      <h1>Enter some data!</h1>
+      <h1>Enter some data! {data}</h1>
       <input type="text" onChange={printData} />
-      {data}
     </div>
   );
 };

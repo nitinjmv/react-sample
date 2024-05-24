@@ -1,6 +1,6 @@
 import Accordion from "react-bootstrap/Accordion";
 
-function BasicExample() {
+export const AccordionTest = () => {
   return (
     <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
@@ -29,6 +29,4 @@ function BasicExample() {
       </Accordion.Item>
     </Accordion>
   );
-}
-
-export default BasicExample;
+};
