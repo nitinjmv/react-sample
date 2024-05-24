@@ -1,5 +1,6 @@
 import { FormEvent, useRef } from "react";
 import { FormInput } from "./FormInput";
+import { Card } from "react-bootstrap";
 
 export const FormTest2 = () => {
   const userNameRef = useRef();
@@ -14,7 +15,7 @@ export const FormTest2 = () => {
   };
 
   return (
-    <div>
+    <Card>
       <h1>Submit form with useRef hook</h1>
       <form onSubmit={handleSubmit}>
         <FormInput
@@ -32,6 +33,6 @@ export const FormTest2 = () => {
         <FormInput refer={ageRef} placeholder="Age" name="age" />
         <button>Submit</button>
       </form>
-    </div>
+    </Card>
   );
 };

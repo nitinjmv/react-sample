@@ -1,3 +1,5 @@
+import { Card } from "react-bootstrap";
+
 type PersonListProps = {
   names: {
     first: string;
@@ -7,7 +9,7 @@ type PersonListProps = {
 
 export const PersonList = (props: PersonListProps) => {
   return (
-    <div>
+    <Card>
       {props.names.map((name) => {
         return (
           <h2>
@@ -15,6 +17,6 @@ export const PersonList = (props: PersonListProps) => {
           </h2>
         );
       })}
-    </div>
+    </Card>
   );
 };

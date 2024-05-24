@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Card } from "react-bootstrap";
 
 export const EmployeeCount = () => {
   function getCount() {
@@ -15,9 +16,13 @@ export const EmployeeCount = () => {
   }
 
   return (
-    <>
-      Employee Count: <h1>{count}</h1>
-      <button onClick={handleClick}>Refresh</button>
-    </>
+    <Card>
+      <Card.Body>
+        <Card.Title>Employee Count: {count}</Card.Title>
+        <div className="d-grid">
+          <button onClick={handleClick}>Refresh</button>
+        </div>
+      </Card.Body>
+    </Card>
   );
 };

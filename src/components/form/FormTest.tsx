@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import { Card } from "react-bootstrap";
 
 export const FormTest = () => {
   const [name, setName] = useState();
@@ -9,7 +10,7 @@ export const FormTest = () => {
   }
 
   return (
-    <>
+    <Card>
       Hi! {name}, your age is: {age}
       <form id="myform" onSubmit={handleSubmit}>
         Name: <input type="text" name="name" value={name} />
@@ -18,6 +19,6 @@ export const FormTest = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
-    </>
+    </Card>
   );
 };

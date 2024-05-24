@@ -1,3 +1,5 @@
+import { Card } from "react-bootstrap";
+
 type PersonProps = {
   name: {
     first: string;
@@ -7,8 +9,8 @@ type PersonProps = {
 
 export const Person = (props: PersonProps) => {
   return (
-    <div>
+    <Card>
       {props.name.last} {props.name.first}
-    </div>
+    </Card>
   );
 };

@@ -1,11 +1,13 @@
+import { Card } from "react-bootstrap";
+
 type HeadingProps = {
   children: string;
 };
 
 export const Heading = (props: HeadingProps) => {
   return (
-    <div>
+    <Card>
       <h3>{props.children}</h3>
-    </div>
+    </Card>
   );
 };

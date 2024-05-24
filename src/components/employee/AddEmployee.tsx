@@ -1,5 +1,6 @@
 import { MouseEvent, useState } from "react";
 import { IEmployee } from "./IEmployee";
+import { Card } from "react-bootstrap";
 
 export const AddEmployee = () => {
   let localStorageKey = "employees";
@@ -39,24 +40,30 @@ export const AddEmployee = () => {
   }
 
   return (
-    <>
-      <form>
-        <h2>Add Employee</h2>
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button onClick={handleSubmit}>Add</button>
-        <button onClick={handleClean}>Clean</button>
-      </form>
-    </>
+    <Card>
+      <Card.Body>
+        <form>
+          <Card.Title>Add Employee</Card.Title>
+          <Card.Text>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Enter Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Card.Text>
+          <div className="d-grid">
+            <button onClick={handleSubmit}>Add</button>
+            <button onClick={handleClean}>Clean</button>
+          </div>
+        </form>
+      </Card.Body>
+    </Card>
   );
 };

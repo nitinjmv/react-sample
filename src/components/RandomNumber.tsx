@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Card } from "react-bootstrap";
 
 type RandomNumberProps = {
   min: number;
@@ -17,9 +18,9 @@ export const RandomNumber = (props: RandomNumberProps) => {
   };
 
   return (
-    <div>
+    <Card>
       <h1>{num}</h1>
       <button onClick={() => refresh()}>Refresh</button>
-    </div>
+    </Card>
   );
 };

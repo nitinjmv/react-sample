@@ -1,3 +1,5 @@
+import { Card } from "react-bootstrap";
+
 type GreetProps = {
   name: string;
   isLoggedIn: boolean;
@@ -6,10 +8,10 @@ type GreetProps = {
 
 export const Greet = (props: GreetProps) => {
   return (
-    <div>
+    <Card>
       {props.isLoggedIn
         ? `Welcome ${props.name}! you have ${props.messageCount} unread message.`
         : `Welcome Guest`}
-    </div>
+    </Card>
   );
 };

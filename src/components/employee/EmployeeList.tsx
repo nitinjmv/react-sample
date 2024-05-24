@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IEmployee } from "./IEmployee";
+import { Card } from "react-bootstrap";
 
 export const EmployeeList = () => {
   const [employees, setEmployees] = useState<IEmployee[]>(
@@ -11,25 +12,29 @@ export const EmployeeList = () => {
   }
 
   return (
-    <>
-      List of Employees
-      <br />
-      <button onClick={handleClick}>Refresh</button>
-      <br />
-      {employees.map((e: IEmployee) => {
-        return (
-          <>
-            <table border={1} cellPadding={5}>
-              <tr>
-                <td>{e.name}</td>
-                <td> {e.email}</td>
-                <td>Delete</td>
-                <td>Edit</td>
-              </tr>
-            </table>
-          </>
-        );
-      })}
-    </>
+    <Card>
+      <Card.Body>
+        <Card.Title>List of Employees</Card.Title>
+        <Card.Text>
+          <table className="table">
+            {employees.map((e: IEmployee) => {
+              return (
+                <>
+                  <tr>
+                    <td>{e.name}</td>
+                    <td> {e.email}</td>
+                    <td>Delete</td>
+                    <td>Edit</td>
+                  </tr>
+                </>
+              );
+            })}
+          </table>
+        </Card.Text>
+        <div className="d-grid">
+          <button onClick={handleClick}>Refresh</button>
+        </div>
+      </Card.Body>
+    </Card>
   );
 };

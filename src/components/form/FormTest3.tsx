@@ -1,5 +1,6 @@
 import { FormEvent } from "react";
 import { FormInput3 } from "./FormInput3";
+import { Card } from "react-bootstrap";
 
 export const FormTest3 = () => {
   function handleSubmit(event: FormEvent<HTMLFormElement>): void {
@@ -9,7 +10,7 @@ export const FormTest3 = () => {
   }
 
   return (
-    <div>
+    <Card>
       <h1>Form Submit test</h1>
       <form onSubmit={handleSubmit}>
         <FormInput3 name="username" placeholder="UserName" isMandatory={true} />
@@ -17,6 +18,6 @@ export const FormTest3 = () => {
         <FormInput3 name="age" placeholder="Age" />
         <button>Submit</button>
       </form>
-    </div>
+    </Card>
   );
 };

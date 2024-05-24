@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Card } from "react-bootstrap";
 
 const RandomNumberInRange = () => {
   const [min, setMin] = useState(0);
@@ -17,12 +18,12 @@ const RandomNumberInRange = () => {
   };
 
   return (
-    <div>
+    <Card>
       <h1>{num}</h1>
       <input type="text" placeholder="Min" name="min" />{" "}
       <input type="text" placeholder="Max" name="max" />{" "}
       <button onClick={() => refresh()}>Generate</button>
-    </div>
+    </Card>
   );
 };
 

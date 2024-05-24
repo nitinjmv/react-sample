@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Card } from "react-bootstrap";
 
 export const BoxWithButton = () => {
   const [data, setData] = useState(null);
@@ -10,11 +11,16 @@ export const BoxWithButton = () => {
   }
 
   return (
-    <div>
-      {isDisplay ? <h1>{data}</h1> : <h1>Enter some data!</h1>}
-
-      <input type="text" onChange={getData} />
-      <button onClick={() => displayData(true)}>Click</button>
-    </div>
+    <Card>
+      <Card.Body>
+        <Card.Title>{isDisplay ? data : "Enter some data!"}</Card.Title>
+        <Card.Text>
+          <input type="text" onChange={getData} />
+        </Card.Text>
+        <div className="d-grid">
+          <button onClick={() => displayData(true)}>Click</button>
+        </div>
+      </Card.Body>
+    </Card>
   );
 };

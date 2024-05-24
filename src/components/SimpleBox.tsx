@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Card } from "react-bootstrap";
 
 export const SimpleBox = () => {
   const [data, setData] = useState(null);
@@ -8,9 +9,9 @@ export const SimpleBox = () => {
   }
 
   return (
-    <div>
+    <Card>
       <h1>Enter some data! {data}</h1>
       <input type="text" onChange={printData} />
-    </div>
+    </Card>
   );
 };
