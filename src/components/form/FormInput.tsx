@@ -1,19 +1,16 @@
+import { Card } from "react-bootstrap";
+
 type FormFields = {
   lable?: string;
   placeholder: string;
   name: string;
   isMandatory?: boolean | false;
-  refer: any;
 };
 export const FormInput = (props: FormFields) => {
   return (
-    <div>
-      <input
-        name={props.name}
-        placeholder={props.placeholder}
-        ref={props.refer}
-      />
+    <Card>
+      <input name={props.name} placeholder={props.placeholder} />
       {props.isMandatory ? "*" : ""}
-    </div>
+    </Card>
   );
 };

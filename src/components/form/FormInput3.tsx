@@ -1,3 +1,5 @@
+import { Card } from "react-bootstrap";
+
 type FieldProperties = {
   name: string;
   placeholder: string;
@@ -7,9 +9,9 @@ type FieldProperties = {
 
 export const FormInput3 = (props: FieldProperties) => {
   return (
-    <div>
+    <Card>
       <input placeholder={props.placeholder} name={props.name} />
       {props.isMandatory ? "*" : ""}
-    </div>
+    </Card>
   );
 };

@@ -18,19 +18,9 @@ export const FormTest2 = () => {
     <Card>
       <h1>Submit form with useRef hook</h1>
       <form onSubmit={handleSubmit}>
-        <FormInput
-          refer={userNameRef}
-          placeholder="Username"
-          name="username"
-          isMandatory={true}
-        />
-        <FormInput
-          refer={emailRef}
-          placeholder="Email"
-          name="email"
-          isMandatory={true}
-        />
-        <FormInput refer={ageRef} placeholder="Age" name="age" />
+        <FormInput placeholder="Username" name="username" isMandatory={true} />
+        <FormInput placeholder="Email" name="email" isMandatory={true} />
+        <FormInput placeholder="Age" name="age" />
         <button>Submit</button>
       </form>
     </Card>
